@@ -16,5 +16,8 @@ public:
 private: 
 	int _line;
 	std::string _file;
+
+protected:
+	mutable std::string buffer;
 };
 

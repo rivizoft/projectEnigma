@@ -11,8 +11,10 @@ const char* EngineException::what() const
 {
 	std::ostringstream oss;
 	oss << getType() << std::endl << getOriginString();
+
+	buffer = oss.str();
 	
-	return oss.str().c_str();
+	return buffer.c_str();
 }
 
 const char* EngineException::getType() const

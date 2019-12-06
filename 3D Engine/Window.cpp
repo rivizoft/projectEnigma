@@ -109,7 +109,9 @@ const char* Window::Exception::what() const
 		<< "Details: " << getErrorString() << std::endl
 		<< getOriginString();
 
-	return oss.str().c_str();
+	buffer = oss.str();
+
+	return buffer.c_str();
 }
 
 const char* Window::Exception::getType() const

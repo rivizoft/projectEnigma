@@ -23,9 +23,9 @@ int CALLBACK WinMain(
 		return msg.wParam;
 	}
 	catch (const EngineException& e) {
-		MessageBoxA(nullptr, e.what(), e.getType(), MB_OK | MB_ICONERROR);
+		MessageBoxA(nullptr, e.what(), e.getType(), MB_OK | MB_ICONERROR);	
 	}
-	catch (const std::exception & e) {
+	catch (const std::exception& e) {
 		MessageBoxA(nullptr, e.what(), "Standart Exception", MB_OK | MB_ICONERROR);
 	}
 
